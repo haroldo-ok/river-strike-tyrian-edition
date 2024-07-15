@@ -140,8 +140,8 @@ void set_min_max_x_to_margins(actor *act) {
 }
 
 void set_enemy_collision(actor *act) {
-	act->col_w = act->pixel_w - 8;
-	act->col_h = act->pixel_h - 8;
+	act->col_w = act->pixel_w - 4;
+	act->col_h = act->pixel_h - 4;
 	act->col_x = (act->pixel_w - act->col_w) >> 1;
 	act->col_y = (act->pixel_h - act->col_h) >> 1;
 }
@@ -304,21 +304,21 @@ void generate_map_row(char *buffer) {
 			int enm_x = ((enm_rand & 0x80) ? map_data.stream1.x : map_data.stream2.x) << 4;
 			switch (rand() & 0x03) {
 			case 0:
-				init_actor(enm, enm_x, 0, 4, 1, ENEMY_TILE_SHIP, 1);
+				init_actor(enm, enm_x, 0, 2, 1, ENEMY_TILE_SHIP, 1);
 				set_min_max_x_to_margins(enm);
 				set_enemy_collision(enm);
 				enm->spd_x = random_speed(1);
 				break;
 				
 			case 1:
-				init_actor(enm, enm_x, 0, 3, 1, ENEMY_TILE_HELI, 1);
+				init_actor(enm, enm_x, 0, 2, 1, ENEMY_TILE_HELI, 1);
 				set_min_max_x_to_margins(enm);
 				set_enemy_collision(enm);
 				enm->spd_x = random_speed(1);
 				break;
 
 			case 2:
-				init_actor(enm, 0, 0, 4, 1, ENEMY_TILE_PLANE, 1);
+				init_actor(enm, 0, 0, 2, 1, ENEMY_TILE_PLANE, 1);
 				set_enemy_collision(enm);
 				enm->spd_x = random_speed(2);
 				if (enm->spd_x < 0) enm->x = 256 - enm->pixel_w;
