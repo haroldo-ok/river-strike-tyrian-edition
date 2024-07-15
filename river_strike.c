@@ -355,8 +355,6 @@ void main() {
 }
 
 SMS_EMBED_SEGA_ROM_HEADER(9999,0); // code 9999 hopefully free, here this means 'homebrew'
-SMS_EMBED_SDSC_HEADER(0,10, 2024,4,5, "Haroldo-OK\\2024", "River Strike (Initial prototype)",
-  "A River Raid Clone.\n"
-  "Originally made for the Minigame a Month - JANUARY 2024 - Water - https://itch.io/jam/minigame-a-month-january-2024\n"
-  "Vastly improved for the SMS Power Coding Competition 2024 - https://www.smspower.org/forums/19973-Competitions2024\n"
+SMS_EMBED_SDSC_HEADER(0,1, 2024,7,15, "Haroldo-OK\\2024", "River Strike Tyrian Edition",
+  "A River Raid Clone with Tyrian Graphics.\n"
   "Built using devkitSMS & SMSlib - https://github.com/sverx/devkitSMS");
