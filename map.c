@@ -51,7 +51,6 @@ void init_enemies() {
 void move_enemies() {
 	FOR_EACH(actor *enm, enemies) {
 		move_actor(enm);
-		//if (enm->active && enm->spd_x) enm->facing_left = enm->spd_x < 0;
 	}
 }
 
@@ -311,7 +310,7 @@ void generate_map_row(char *buffer) {
 				break;
 				
 			case 1:
-				init_actor(enm, enm_x, 0, 2, 1, ENEMY_TILE_HELI, 1);
+				init_actor(enm, enm_x, 0, 2, 1, ENEMY_TILE_HELI, 8);
 				set_min_max_x_to_margins(enm);
 				set_enemy_collision(enm);
 				enm->spd_x = random_speed(1);
