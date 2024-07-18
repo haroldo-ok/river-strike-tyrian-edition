@@ -225,20 +225,9 @@ void title_screen() {
 	SMS_setBGScrollX(0);
 	SMS_setBGScrollY(0);
 
-	SMS_loadPSGaidencompressedTiles(title_logo_tiles_psgcompr, 0);
-	SMS_loadBGPalette(title_logo_palette_bin);
-	SMS_loadTileMapArea(0, 0, title_logo_tilemap_bin, SCREEN_CHAR_W, 7);
-
-	SMS_loadPSGaidencompressedTiles(title_image_tiles_psgcompr, 180);
-	SMS_loadSpritePalette(title_image_palette_bin);
-	unsigned int *t = title_image_tilemap_bin;
-	for (char y = 7; y != SCREEN_CHAR_H; y++) {
-		SMS_setNextTileatXY(0, y);
-		for (char x = 0; x != SCREEN_CHAR_W; x++) {
-			SMS_setTile(*t + 180 + TILE_USE_SPRITE_PALETTE);
-			t++;
-		}
-	}
+	SMS_loadPSGaidencompressedTiles(title_tiles_psgcompr, 0);
+	SMS_loadBGPalette(title_palette_bin);
+	SMS_loadTileMapArea(0, 0, title_tilemap_bin, SCREEN_CHAR_W, SCREEN_CHAR_H);
 
 	clear_sprites();
 
@@ -355,6 +344,6 @@ void main() {
 }
 
 SMS_EMBED_SEGA_ROM_HEADER(9999,0); // code 9999 hopefully free, here this means 'homebrew'
-SMS_EMBED_SDSC_HEADER(0,1, 2024,7,15, "Haroldo-OK\\2024", "River Strike Tyrian Edition",
+SMS_EMBED_SDSC_HEADER(0,2, 2024,7,17, "Haroldo-OK\\2024", "River Strike Tyrian Edition",
   "A River Raid Clone with Tyrian Graphics.\n"
   "Built using devkitSMS & SMSlib - https://github.com/sverx/devkitSMS");

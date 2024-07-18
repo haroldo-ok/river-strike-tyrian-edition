@@ -2,8 +2,8 @@
 #define MAP_H
 
 #define ENEMY_TILE_SHIP (130)
-#define ENEMY_TILE_HELI (146)
-#define ENEMY_TILE_PLANE (158)
+#define ENEMY_TILE_HELI (214)
+#define ENEMY_TILE_PLANE (162)
 #define ENEMY_TILE_FUEL (20)
 #define ENEMY_TILE_BRIDGE (86)
 
