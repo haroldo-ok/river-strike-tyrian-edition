@@ -344,6 +344,6 @@ void main() {
 }
 
 SMS_EMBED_SEGA_ROM_HEADER(9999,0); // code 9999 hopefully free, here this means 'homebrew'
-SMS_EMBED_SDSC_HEADER(0,1, 2024,7,15, "Haroldo-OK\\2024", "River Strike Tyrian Edition",
+SMS_EMBED_SDSC_HEADER(0,2, 2024,7,17, "Haroldo-OK\\2024", "River Strike Tyrian Edition",
   "A River Raid Clone with Tyrian Graphics.\n"
   "Built using devkitSMS & SMSlib - https://github.com/sverx/devkitSMS");
